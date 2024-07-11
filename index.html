@@ -11,20 +11,21 @@
 <body>
     <header>
         <div class="nav">
-            <a href="">O MNIE</a>
-            <a href="">STWORZONE PROJEKTY</a>
-            <a href="">KONTAKT</a>
+            <a href="#o-mnie">O MNIE</a>
+            <a href="#projekty">STWORZONE PROJEKTY</a>
+            <a href="#kontakt">KONTAKT</a>
         </div>
     </header>
     <main>
-        <div class="o-mnie kontener">
+        <div id="o-mnie" class="o-mnie kontener">
             <h2>O MNIE</h2>
             <p>Cześć! Mam na imię Adam i pasjonuję się tworzeniem stron internetowych. Zapraszam Cię do sprawdzenia moich doczesnych projektów i skontaktowania się ze mną jeśli jesteś zainteresowany współpracą.</p>
+            <br>
             <h3>Znam się na:</h3>
             <p>➤ HTML, CSS/SCSS, JS, REACT</p>
             <p>➤ Wordpress, PHP</p>
         </div>
-        <div class="projekty kontener">
+        <div id="projekty" class="projekty kontener">
             <h2>STWORZONE PROJEKTY</h2>
             <div class="projekt">
                 <img src="./img/projekt1.jpg"> </img>
@@ -36,19 +37,16 @@
                 <p><a href="wp.pl">www.wp.pl</a></p>
                 <p>Technologie użyte: HTML, CSS, JS</p>
             </div>
-            <div class="projekt">
-                <img src="./img/projekt1.jpg"> </img>
-                <p><a href="wp.pl">www.wp.pl</a></p>
-                <p>Technologie użyte: HTML, CSS, JS</p>
-            </div>
         </div>
-        <div class="kontakt kontener">
+        <div id="kontakt" class="kontakt kontener">
             <h2>KONTAKT</h2>
-            <p>+ 48 539 157 991</p>
+            <p><a href="tel:+48539157991">+ 48 539 157 991</a></p>
             <p>gnatowski.adam.biz@gmail.com</p>
-            <p>Pracuję w godzinach 9 - 17</p>
         </div>
+        <br>
+        <br>
     </main>
-    <script src="scripts.js"></script>
+    <canvas id="backgroundCanvas"></canvas>
+    <script src="script.js"></script>
 </body>
 </html>

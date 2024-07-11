@@ -10,11 +10,12 @@
   }
 
 h1, h2, h3, p {
-  margin-top: 10px;
+  margin: 10px;
 }
 
 header{
-    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
     height: 70px;
     display: flex;
     align-items: center;
@@ -31,11 +32,163 @@ header{
     padding: 10px 5px;
   }
 
+
+main {
+  .o-mnie{
+    max-width: 900px;
+  }
+}  
   .projekt{
-    margin: 50px 0px;
+    margin: 30px 0px;
     
     img{
       max-width: 900px;
     }
   }
 
+  ///////////////////////////////////////
+  //////////// RESPONSYWNOŚĆ ////////////
+  /////////////////////////////////////// 
+
+  @media  (max-width: 768px) {
+    body{
+      font-size: 0.7rem;
+    }
+    
+    
+    .projekt{
+      img{
+        max-width: 300px;
+      }
+    }
+
+
+  }
+
+  ///////////////////////////////////////
+  //////////// Extra styles ////////////
+  /////////////////////////////////////// 
+  
+
+  
+
+header {
+
+  a {
+    margin: 0 20px;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #007BFF;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #007BFF;
+      left: 0;
+      bottom: -5px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.kontener {
+  max-width: 1300px;
+  min-height: 100px;
+  margin: 20px auto;
+  padding: 20px 15px;
+  background: rgba(255, 255, 255, 0.4); // White background with 80% opacity
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.kontener:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.kontener:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.kontener:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.projekt {
+  margin: 50px 0;
+
+  img {
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  a {
+    font-weight: 700;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kontakt{
+  a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+}
+
+
+
+
+  ///////////////////////////////////////
+  //////////// CANVAS ////////////
+  /////////////////////////////////////// 
+  
+
+  canvas#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.4; // Adjust opacity to make it less intrusive
+}
